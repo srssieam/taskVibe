@@ -31,7 +31,7 @@ const Login = () => {
                     <p className='text-xl text-center text-[black]'>New here? <Link className=' font-bold text-[#1d383f] hover:underline' to='/register'> create account </Link></p>
                     <p className='text-center'>Or login with google</p>
                     <div className='flex justify-center'>
-                        <Button variant='contained' sx={{borderRadius:"50px", backgroundColor:"#1d383f", '&:hover': {borderBottom:"6px solid #74f74c", backgroundColor:"#1d383f" }}}  endIcon={<GoogleIcon />}>Google</Button>
+                        <Button variant='contained' sx={{borderRadius:"50px", borderBottom:"6px solid #74f74c", backgroundColor:"#1d383f", '&:hover': { backgroundColor:"#1d383f", color:"#74f74c" }}}  endIcon={<GoogleIcon />}>Google</Button>
                     </div>
                 </div>
             </Stack>
