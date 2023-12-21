@@ -1,3 +1,4 @@
+import Benefit from "../components/Benefit";
 import Why from "../components/Why";
 import Banner from "../components/banner/Banner";
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Why></Why>
+            <Benefit></Benefit>
         </div>
     );
 };
