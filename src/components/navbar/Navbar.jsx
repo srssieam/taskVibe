@@ -118,7 +118,7 @@ const Navbar = () => {
                             <NavLink className="navLink" to={navmenu.pathname} key={idx}>
                                 {({ isActive }) => (
                                     <button
-                                        className={isActive ? " border-b-[4px] rounded-[50px] p-[6px] border-[#74f74c] text-[#48ffd7] my-2 mx-4" : " my-2 mx-4 p-2 text-white"}
+                                        className={isActive ? " border-b-[4px] rounded-[50px] p-[6px] border-[#74f74c] text-[#48ffd7] my-2 mx-4" : " my-2 mx-4 p-2 text-white hover:rounded-[50px] hover:border-b-[4px] hover:border-[#74f74c] hover:text-[#48ffd7]"}
                                         onClick={handleCloseNavMenu}
 
                                     >
