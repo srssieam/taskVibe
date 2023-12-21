@@ -8,14 +8,33 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { Button } from '@mui/material';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const navItems = [
+    {
+        route: "Home",
+        pathname: "/"
+    },
+    {
+        route: "Tasks",
+        pathname: "/tasks"
+    },
+    {
+        route: "Dashboard",
+        pathname: "/dashboard"
+    },
+    {
+        route: "Calender",
+        pathname: "/calender"
+    }
+]
+
+
+const settings = ['Profile', 'Logout'];
 
 
 const Navbar = () => {
@@ -37,27 +56,10 @@ const Navbar = () => {
         setAnchorElUser(null);
     };
     return (
-        <AppBar position="static">
-            <Container maxWidth="xl">
+        <AppBar position="static" sx={{ backgroundColor: "#1d383f", height: { xs: '60px', sm: '70px' }, }}>
+            <Container maxWidth="lg">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
+                    <h3 className='text-2xl font-bold text-[#48ffd7] hidden lg:block mr-8'>Task<span className='text-[#74f74c]'>Vibe</span></h3>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -88,45 +90,34 @@ const Navbar = () => {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
-                                </MenuItem>
+                            {navItems.map((navmenu, idx) => (
+                                <NavLink to={navmenu.pathname} key={idx} >
+                                    <MenuItem onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center">{navmenu.route}</Typography>
+                                    </MenuItem>
+                                </NavLink>
                             ))}
                         </Menu>
                     </Box>
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
+                    <h3 className='text-2xl font-bold text-[#48ffd7] text-center lg:hidden mr-8'>Task<span className='text-[#74f74c]'>Vibe</span></h3>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                {page}
-                            </Button>
+                        {navItems.map((navmenu, idx) => (
+                            <NavLink className="navLink" to={navmenu.pathname} key={idx}>
+                                {({ isActive }) => (
+                                    <button
+                                        className={ isActive ? " border-b-[4px] rounded-[50px] p-[6px] border-[#74f74c] text-[#48ffd7] my-2 mx-4" : " my-2 mx-4 p-2 text-white" }
+                                        onClick={handleCloseNavMenu}
+                                       
+                                    >
+                                        {navmenu.route}
+                                    </button>
+                                )}
+                            </NavLink>
                         ))}
                     </Box>
 
-                    <Box sx={{ flexGrow: 0 }}>
+                    <Button sx={{color:"white", fontWeight:"500", border:"1px solid #74f74c"}}>Login</Button>
+                    {/* <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -154,7 +145,7 @@ const Navbar = () => {
                                 </MenuItem>
                             ))}
                         </Menu>
-                    </Box>
+                    </Box> */}
                 </Toolbar>
             </Container>
         </AppBar>
