@@ -28,7 +28,7 @@ const Login = () => {
                     <Button sx={{backgroundColor:"#1d383f", "&:hover": { backgroundColor:"#1d383f", color:"#74f74c"} }} type="submit" variant="contained" size="large">Login</Button>
                 </form>
                 <div className='space-y-4 mt-4'>
-                    <p className='text-xl text-center text-[black]'>New here? <Link className=' font-bold text-[#1d383f] hover:underline' to='/register'> create account </Link></p>
+                    <p className='text-xl text-center text-[black]'>New here? <Link className=' font-bold text-[#1d383f] hover:underline' to='/register'> Create account </Link></p>
                     <p className='text-center'>Or login with google</p>
                     <div className='flex justify-center'>
                         <Button variant='contained' sx={{borderRadius:"50px", borderBottom:"6px solid #74f74c", backgroundColor:"#1d383f", '&:hover': { backgroundColor:"#1d383f", color:"#74f74c" }}}  endIcon={<GoogleIcon />}>Google</Button>
