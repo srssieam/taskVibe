@@ -3,6 +3,8 @@ import MainLayout from "../layout/mainLayout";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Dashboard from "../pages/Dashboard";
+import Calender from "../pages/Calender";
 
 
 const Router = createBrowserRouter([
@@ -21,6 +23,14 @@ const Router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>
+            },
+            {
+                path: "/dashboard",
+                element: <Dashboard></Dashboard>
+            },
+            {
+                path: "/calender",
+                element: <Calender></Calender>
             }
         ]
     }

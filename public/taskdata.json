@@ -1,0 +1,37 @@
+[
+    {
+      "taskTitle": "Prepare Quarterly Report",
+      "description": "Gather sales and performance data for the last quarter, analyze trends, and compile a comprehensive report for stakeholders.",
+      "deadline": "2023-01-15",
+      "status": "Ongoing",
+      "userEmail": "john@example.com"
+    },
+    {
+      "taskTitle": "Marketing Campaign Launch",
+      "description": "Plan and execute a social media marketing campaign for the new product launch.",
+      "deadline": "2023-02-05",
+      "status": "To Do",
+      "userEmail": "srssieam@gmail.com"
+    },
+    {
+      "taskTitle": "Website Redesign",
+      "description": "Collaborate with design and development teams to revamp the company website, focusing on user experience improvements.",
+      "deadline": "2023-03-01",
+      "status": "To Do",
+      "userEmail": "srssieam@gmail.com"
+    },
+    {
+      "taskTitle": "Client Presentation Preparation",
+      "description": "Create a compelling presentation for an upcoming client meeting, highlighting project progress and future plans.",
+      "deadline": "2023-01-30",
+      "status": "Completed",
+      "userEmail": "srssieam@gmail.com"
+    },
+    {
+      "taskTitle": "Employee Training Program",
+      "description": "Develop a training program for new employees, covering company policies, tools, and best practices.",
+      "deadline": "2023-02-15",
+      "status": "To Do",
+      "userEmail": "srssieam@gmail.com"
+    }
+  ]
