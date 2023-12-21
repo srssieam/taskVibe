@@ -81,8 +81,8 @@ const Register = () => {
 
     return (
         <div>
-            <div className="w-full min-h-[100vh] flex justify-center items-center px-6 md:px-0">
-                <Stack direction={'column'} spacing={2} sx={{ minWidth: "30%", border: "2px solid", borderRadius: "8px", borderColor: "#1d383f", padding: '25px' }}>
+            <div className="w-full min-h-[100vh] flex justify-center items-center">
+                <Stack direction={'column'} spacing={2} sx={{ minWidth: "40%", border: "2px solid", borderRadius: "8px", borderColor: "#1d383f", padding: '25px' }}>
                     <form onSubmit={handleRegister} className='flex flex-col gap-4'>
                         <h3 className="text-2xl font-semibold">Create account</h3>
                         <TextField
@@ -95,7 +95,7 @@ const Register = () => {
                         <div>
                             <h1 className="text-green-700">Your photo</h1>
                             <input
-                                className="mt-2 py-2 px-4 border rounded-lg bg-[#74f74c] cursor-pointer"
+                                className="max-w-[150px] py-2 px-4 border rounded-lg bg-[#74f74c] cursor-pointer"
                                 required
                                 type="file"
                                 src="" alt=""

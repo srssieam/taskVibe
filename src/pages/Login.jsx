@@ -52,7 +52,7 @@ const Login = () => {
     }
     return (
         <div className="w-full min-h-[100vh] flex justify-center items-center px-6 md:px-0">
-            <Stack direction={'column'} spacing={2} sx={{ minWidth: "30%", border: "2px solid", borderRadius: "8px", borderColor: "#1d383f", padding: '25px' }}>
+            <Stack direction={'column'} spacing={2} sx={{ minWidth: "40%", border: "2px solid", borderRadius: "8px", borderColor: "#1d383f", padding: '25px' }}>
                 <form onSubmit={handleLogin} className='flex flex-col gap-4'>
                     <h3 className="text-2xl font-semibold">Login</h3>
                     <TextField

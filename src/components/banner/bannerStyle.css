@@ -1,0 +1,11 @@
+.textDesign{
+    background-image: linear-gradient(90deg, #48ffd7,  #74f74c);
+    background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(5px);
+    -webkit-background-clip: text;
+    /* color: #000119; */
+    padding: calc(calc(1em / 16) / 2);
+    letter-spacing: calc(2px);
+    color:rgb(53, 37, 28);
+}
