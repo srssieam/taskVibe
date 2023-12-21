@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Button } from '@mui/material';
 
 const navItems = [
@@ -116,7 +116,7 @@ const Navbar = () => {
                         ))}
                     </Box>
 
-                    <Button sx={{color:"white", fontWeight:"500", border:"1px solid #74f74c"}}>Login</Button>
+                    <Link to='/login'><Button sx={{color:"white", fontWeight:"500", border:"1px solid #74f74c"}}>Login</Button></Link>
                     {/* <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
