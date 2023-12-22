@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import Calender from "../pages/Calender";
+import Tasks from "../pages/Tasks";
 
 
 const Router = createBrowserRouter([
@@ -27,6 +28,10 @@ const Router = createBrowserRouter([
             {
                 path: "/dashboard",
                 element: <Dashboard></Dashboard>
+            },
+            {
+                path: "/tasks",
+                element: <Tasks></Tasks>
             },
             {
                 path: "/calender",
