@@ -6,6 +6,7 @@ import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import Calender from "../pages/Calender";
 import Tasks from "../pages/Tasks";
+import PrivateRoute from "./PrivateRoute";
 
 
 const Router = createBrowserRouter([
@@ -27,11 +28,11 @@ const Router = createBrowserRouter([
             },
             {
                 path: "/dashboard",
-                element: <Dashboard></Dashboard>
+                element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
             },
             {
                 path: "/tasks",
-                element: <Tasks></Tasks>
+                element: <PrivateRoute><Tasks></Tasks></PrivateRoute>
             },
             {
                 path: "/calender",

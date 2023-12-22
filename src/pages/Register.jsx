@@ -1,5 +1,5 @@
 import { Button, Stack, TextField } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GoogleIcon from '@mui/icons-material/Google';
 import { useState } from "react";
 import useAuth from "../hooks/useAuth";
@@ -13,6 +13,7 @@ const Register = () => {
     const [error, setError] = useState('')
     const [photo, setPhoto] = useState('')
     const { createUser, updateUserProfile, googleLogin } = useAuth();
+    const navigate = useNavigate();
 
     const handlePhotoChange = async e =>{
         e.preventDefault()
@@ -52,6 +53,7 @@ const Register = () => {
                     text: `welcome to TaskVibe`,
                     icon: "success"
                 });
+                navigate("/")
             })
             .catch(error => {
                 const errorMessage = error.message;

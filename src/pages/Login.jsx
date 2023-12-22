@@ -1,6 +1,6 @@
 import GoogleIcon from '@mui/icons-material/Google';
 import { Button, Stack, TextField } from "@mui/material";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import Swal from 'sweetalert2';
 import { useState } from 'react';
@@ -9,6 +9,9 @@ import { useState } from 'react';
 const Login = () => {
     const [error, setError] = useState('')
     const { logIn, googleLogin } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+    let toGo = location.state?.from?.pathname || "/"
 
     const handleLogin = e => {
         e.preventDefault()
@@ -24,6 +27,7 @@ const Login = () => {
                     text: `Welcome back`,
                     icon: "success"
                 });
+                navigate(toGo, {replace:true});
             })
             .catch(error => {
                 const errorMassage = error.message;
@@ -45,6 +49,7 @@ const Login = () => {
                     text: `Welcome back`,
                     icon: "success"
                 });
+                navigate(toGo, {replace:true});
             })
             .catch(error => {
                 console.log(error.message)
